@@ -64,7 +64,14 @@ int main(int argc, char **argv)
 				break;
 			}
 			i++;
+			if (p[i].opcode == NULL)
+			{
+				printf("L%d: unknown instruction %s\n", line_number, command);
+				exit(EXIT_FAILURE);
+
+			}
 		}
+		
 		n = NULL;
 	}
 	fclose(fd);

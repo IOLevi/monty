@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * add: adds the top two elements of the stack
+ * _add - adds the top two elements of the stack
  * @head: pointer to the doubled linked list
  * @line_number: line number
  */
@@ -32,11 +32,12 @@ void _add(stack_t **head, unsigned int line_number)
 	_pop(head, line_number);
 }
 /**
- * nop: doesn't do anything
+ * _nop - doesn't do anything
  * @head: pointer to double linked list to the stack
  * @line_number: line number
  */
-void _nop(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int line_number)
+void _nop(__attribute__((unused)) stack_t **head,
+__attribute__((unused)) unsigned int line_number)
 {
 	;
 }

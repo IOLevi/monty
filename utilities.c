@@ -14,7 +14,7 @@ int check_comment(char *s)
 }
 
 /**
- * free_list: frees the list
+ * free_list - frees the list
  * @head: pointer to the stack
  */
 void free_list(stack_t *head)
@@ -35,7 +35,7 @@ void free_list(stack_t *head)
 }
 
 /**
- * initialize_instructions: an array of opcode functions
+ * initialize_instructions - an array of opcode functions
  * @p: array to interate through
  */
 void initialize_instructions(instruction_t p[])

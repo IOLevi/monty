@@ -103,7 +103,7 @@ void _pint(stack_t **head, unsigned int line_number)
 }
 
 /**
- * pop - removes the top element of the stack
+ * _pop - removes the top element of the stack
  * @head: pointer to the head of stack
  * @line_number: line number
  */
@@ -133,7 +133,7 @@ void _pop(stack_t **head, unsigned int line_number)
 	free(hpointer);
 }
 /**
- * swap - swaps the top two elements of the stack
+ * _swap - swaps the top two elements of the stack
  * @head: pointer to the head of stack
  * @line_number: line number
  */

@@ -1,1 +1,1 @@
-Queues and Stacks in C
+#Holberton School - Stacks, Queues - LIFO, FIFO

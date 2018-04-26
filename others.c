@@ -62,12 +62,14 @@ void _pchar(stack_t **head, unsigned int line_number)
 
 	if (hpointer->n < 0 || hpointer->n > 127)
 	{
-          printf("L%d: can't pchar, value out of range\n", line_number);
-          exit(EXIT_FAILURE);
+		printf("L%d: can't pchar, value out of range\n", line_number);
+		exit(EXIT_FAILURE);
 	}
-  else
-          putchar(hpointer->n);
-  putchar('\n');
+	else
+	{
+		putchar(hpointer->n);
+	}
+	putchar('\n');
 }
 /**
  * _pstr - prints the char at the top of the stack

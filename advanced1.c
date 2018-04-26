@@ -16,7 +16,7 @@ void _sub(stack_t **head, unsigned int line_number)
 		printf("L%d: can't sub, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	hpointer =*head;
+	hpointer = *head;
 	while (hpointer->next->next != NULL)
 		hpointer = hpointer->next;
 	sub = hpointer->n - hpointer->next->n;

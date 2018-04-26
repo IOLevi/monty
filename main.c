@@ -39,6 +39,7 @@ int main(int argc, char **argv)
 
 	}
 	line_number = 0;
+	strinput = NULL;
 	while (getline(&strinput, &len, fd) != -1)
 	{
 		line_number++;

@@ -33,7 +33,6 @@ int main(int argc, char **argv)
 {
 
 	FILE *fd;
-	int readnum;
 	size_t len;
 	unsigned int line_number;
 	int i;
@@ -136,7 +135,7 @@ void initialize_instructions(instruction_t p[])
  * @head: pointer to the head of stack
  * @line_number: line number
  */
-void _pall(stack_t **head, unsigned int line_number)
+void _pall(stack_t **head, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *hpointer;
 
@@ -335,7 +334,7 @@ void _add(stack_t **head, unsigned int line_number)
  * @head: pointer to double linked list to the stack
  * @line_number: line number
  */
-void _nop(stack_t **head, unsigned int line_number)
+void _nop(__attribute__((unused)) stack_t **head, __attribute__((unused)) unsigned int line_number)
 {
 	;
 }
@@ -494,7 +493,7 @@ void _pchar(stack_t **head, unsigned int line_number)
  * @head: pointer to the stack
  * @line_number: line number
  */
-void _pstr(stack_t **head, unsigned int line_number)
+void _pstr(stack_t **head, __attribute__((unused)) unsigned int line_number)
 {
 	stack_t *hpointer;
 

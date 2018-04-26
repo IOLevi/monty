@@ -59,4 +59,5 @@ void _sub(stack_t **head, unsigned int line_number);
 void _pstr(stack_t **head, unsigned int line_number);
 int check_comment(char *s);
 void free_list(stack_t *head);
+extern char *n;
 #endif

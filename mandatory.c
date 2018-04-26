@@ -41,7 +41,6 @@ void _push(stack_t **head, unsigned int line_number)
 	negativeflag = 0;
 	if (n != NULL && n[0] == '-')
 		negativeflag = 1;
-	
 	if (n == NULL || (atoi(n) == 0 && strcmp(n, "0") != 0))
 	{
 		printf("L%d: usage: push integer\n", line_number);

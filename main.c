@@ -71,7 +71,6 @@ int main(int argc, char **argv)
 
 			}
 		}
-		
 		n = NULL;
 	}
 	fclose(fd);

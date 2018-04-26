@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	unsigned int line_number;
 	int i;
 	char *strinput;
-	instruction_t p[8];
+	instruction_t p[14];
 	char *command;
 	char *argument;
 	stack_t *head;
@@ -71,12 +71,3 @@ int main(int argc, char **argv)
 	return (EXIT_SUCCESS);
 
 }
-
-
-
-
-
-
-
-
-

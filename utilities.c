@@ -61,6 +61,24 @@ void initialize_instructions(instruction_t p[])
 	p[6].opcode = "nop";
 	p[6].f = _nop;
 
-	p[7].opcode = NULL;
-	p[7].f = NULL;
+  p[7].opcode = "sub";
+  p[7].f = _sub;
+
+  p[8].opcode = "div";
+  p[8].f = _div;
+
+  p[9].opcode = "mul";
+  p[9].f = _mul;
+
+  p[10].opcode = "mod";
+  p[10].f = _mod;
+
+  p[11].opcode = "pchar";
+  p[11].f = _pchar;
+
+  p[12].opcode = "pstr";
+  p[12].f = _pstr;
+
+	p[13].opcode = NULL;
+	p[13].f = NULL;
 }

@@ -65,7 +65,9 @@ void _pchar(stack_t **head, unsigned int line_number)
 		printf("L%d: can't pchar, value out of range\n", line_number);
 		exit(EXIT_FAILURE);
 	}
-	putchar(hpointer->n);
+  else
+          putchar(hpointer->n);
+  putchar('\n');
 }
 /**
  * _pstr - prints the char at the top of the stack

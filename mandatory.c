@@ -36,14 +36,7 @@ void _push(stack_t **head, unsigned int line_number)
 	stack_t *new;
 	stack_t *hpointer;
 	int newn;
-	int negativeflag;
 
-	negativeflag = 0;
-	if (n[0] == '-')
-	{
-		n++;
-		negativeflag = 1;
-	}
 	if (atoi(n) == 0 && strcmp(n, "0") != 0)
 	{
 		printf("L%d: usage: push integer\n", line_number);
@@ -51,9 +44,6 @@ void _push(stack_t **head, unsigned int line_number)
 	}
 	else
 		newn = atoi(n);
-
-	if (negativeflag)
-		newn *= -1;
 
 	new = malloc(sizeof(stack_t));
 	if (!new)

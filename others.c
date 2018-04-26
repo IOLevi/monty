@@ -11,18 +11,11 @@ void _add(stack_t **head, unsigned int line_number)
 
 	if (!head || !*head || (*head)->next == NULL)
 	{
-		printf("L%d: can't swap, stack too short\n", line_number);
+		printf("L%d: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	hpointer = *head;
-	if (hpointer->next->next == NULL)
-	{
-		sum = hpointer->n + hpointer->next->n;
-		hpointer->n = sum;
-		_pop(head, line_number);
-		return;
-	}
 
 	while (hpointer->next->next != NULL)
 		hpointer = hpointer->next;

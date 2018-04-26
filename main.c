@@ -76,6 +76,7 @@ int main(int argc, char **argv)
 	}
 	fclose(fd);
 	free_list(head);
+	if (strinput)
+		free(strinput);
 	return (EXIT_SUCCESS);
-
 }

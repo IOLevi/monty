@@ -3,6 +3,10 @@
 char *n = NULL;
 //NOTE TO SELF: RUN "./a.out byte.m" exactly to get it to read the line
 
+/**
+ * free_list: frees the list
+ * @head: pointer to the stack
+ */
 void free_list(stack_t *head)
 {
 	stack_t *temp;
@@ -19,6 +23,12 @@ void free_list(stack_t *head)
 
 
 }
+/**
+ * main - main function of the monty byte code program
+ * @argc: number of arguments
+ * @argv: pointer to string of arguments
+ * Return: 0 on success, -1 on failure
+ */
 int main(int argc, char **argv)
 {
 
@@ -91,7 +101,10 @@ int main(int argc, char **argv)
 	return (EXIT_SUCCESS);
 
 }
-
+/**
+ * initialize_instructions: an array of opcode functions
+ * @p: array to interate through
+ */
 void initialize_instructions(instruction_t p[])
 {
 	p[0].opcode = "push";
@@ -118,7 +131,11 @@ void initialize_instructions(instruction_t p[])
 	p[7].opcode = NULL;
 	p[7].f = NULL;
 }
-
+/**
+ * _pall - prints all the values on the stack
+ * @head: pointer to the head of stack
+ * @line_number: line number
+ */
 void _pall(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -140,7 +157,11 @@ void _pall(stack_t **head, unsigned int line_number)
 
 	}
 }
-
+/**
+ * _push - pushes an element to the stack
+ * @head: pointer to the head of stack
+ * @line_number: line number
+ */
 void _push(stack_t **head, unsigned int line_number)
 {
 	stack_t *new;
@@ -186,7 +207,11 @@ void _push(stack_t **head, unsigned int line_number)
 	hpointer->next = new;
 	new->prev = hpointer;
 }
-
+/**
+ * _pint - prints the value at the top of the stack
+ * @head: pointer to the head of stack
+ * @line_number: line number
+ */
 void _pint(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -203,7 +228,11 @@ void _pint(stack_t **head, unsigned int line_number)
 	printf("%d\n", hpointer->n);
 }
 
-
+/**
+ * pop - removes the top element of the stack
+ * @head: pointer to the head of stack
+ * @line_number: line number
+ */
 void _pop(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -233,7 +262,11 @@ void _pop(stack_t **head, unsigned int line_number)
 	free(hpointer);
 
 }
-
+/**
+ * swap - swaps the top two elements of the stack
+ * @head: pointer to the head of stack
+ * @line_number: line number
+ */
 void _swap(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -263,7 +296,11 @@ void _swap(stack_t **head, unsigned int line_number)
 	hpointer->prev = hpointer->next;
 	hpointer->next = NULL;
 }
-
+/**
+ * add: adds the top two elements of the stack
+ * @head: pointer to the doubled linked list
+ * @line_number: line number
+ */
 void _add(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -293,12 +330,21 @@ void _add(stack_t **head, unsigned int line_number)
 	hpointer->n = sum;
 	_pop(head, line_number);
 }
-
+/**
+ * nop: doesn't do anything
+ * @head: pointer to double linked list to the stack
+ * @line_number: line number
+ */
 void _nop(stack_t **head, unsigned int line_number)
 {
 	;
 }
-
+/**
+ * _sub - subtracts the top element of the stack from the second
+ * top element of the stack
+ * @head: pointer to the head
+ * @line_number: line number
+ */
 void _sub(stack_t **head, unsigned int line_number)
 {
 	int sub;
@@ -317,7 +363,12 @@ void _sub(stack_t **head, unsigned int line_number)
 	_pop(head, line_number);
 
 }
-
+/**
+ * _div - divides the second top element of the stack by the top
+ * element of the stack
+ * @head: pointer to the stack
+ * @line_number: line number
+ */
 void _div(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -343,7 +394,12 @@ void _div(stack_t **head, unsigned int line_number)
 	hpointer->n = result;
 	_pop(head, line_number);
 }
-
+/**
+ * _mul - multiplies the second top element of the stack with the to
+ * element of the stack
+ * @head: pointer to the stack
+ * @line_number: line number
+ */
 void _mul(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -363,7 +419,12 @@ void _mul(stack_t **head, unsigned int line_number)
 	hpointer->n = result;
 	_pop(head, line_number);
 }
-
+/**
+ * _mod - computes the rest of the division of the secont top element
+ * of the stack by the top element of the stack
+ * @head: pointer to the stack
+ * @line_number: line number
+ */
 void _mod(stack_t **head, unsigned int line_number)
 {
 	int result;
@@ -401,6 +462,11 @@ int check_comment(char *s)
 	else
 		return (0);
 }
+/**
+ * _pchar - prints the char at the top of the stack
+ * @head: pointer to the stack
+ * @line_number: line number
+ */
 void _pchar(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;
@@ -423,7 +489,11 @@ void _pchar(stack_t **head, unsigned int line_number)
 	}
 	putchar(hpointer->n);
 }
-
+/**
+ * _pstr - prints the char at the top of the stack
+ * @head: pointer to the stack
+ * @line_number: line number
+ */
 void _pstr(stack_t **head, unsigned int line_number)
 {
 	stack_t *hpointer;

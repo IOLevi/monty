@@ -500,7 +500,7 @@ void _pstr(stack_t **head, unsigned int line_number)
 
 	if (!head || !*head)
 	{
-		print("\n");
+		printf("\n");
 		return;
 	}
 
